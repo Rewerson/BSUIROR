@@ -6,8 +6,8 @@ nl
 noecho
 curs_set(0)
 
-ypos = 5
-xpos = 20
+ypos = lines / 2
+xpos = cols / 2
 
 down = true
 right = true
@@ -22,7 +22,7 @@ while TRUE
   setpos(ypos + 2, xpos);   addstr("/'\\_   _/`\\")
   setpos(ypos + 3, xpos);   addstr("\\___)=(___/")
 
-  if down == true
+  if down
     ypos += 1
   else
     ypos -= 1
@@ -33,7 +33,7 @@ while TRUE
   if ypos < 4
     down = true
   end
-  if right == true
+  if right
     xpos += 1
   else
     xpos -= 1
